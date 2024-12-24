@@ -1,0 +1,19 @@
+*** Creating Trace Output File 'ADD1.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\add2nums.o"'
+### ADS-LD Command completed:
+--device DARMP ".\add2nums.o" --strict --scatter "ADD1.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\ADD1.map" -o "ADD1.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'ADD1.axf'
+### ADS-LD Command File: 'ADD1.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'ADD1.lnp', Handle=0x00000234
+### Writing '.lnp' file
+### ADS-LD Command file 'ADD1.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 1 errors
+### Updating obj list
+### LDADS_file() completed.

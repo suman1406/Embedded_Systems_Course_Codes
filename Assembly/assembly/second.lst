@@ -1,0 +1,96 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             Example2, CODE, READONLY
+    2 00000000         ; Name this block of code ARMex
+    3 00000000                 ENTRY                        ; Mark first instru
+                                                            ction to execute
+    4 00000000         start
+    5 00000000 E3A01002        MOV              r1,#Q       ;load r1 with the c
+                                                            onstant Q
+    6 00000004 E3A02004        MOV              r2,#R
+    7 00000008 E3A03005        MOV              r3,#S
+    8 0000000C E0810002        ADD              r0,r1,r2
+    9 00000010 E0800003        ADD              r0,r0,r3
+   10 00000014         
+   11 00000014         Stop
+   12 00000014         
+   13 00000014 00000002 
+                       Q       EQU              2           ;Equate the symboli
+                                                            c name Q to the val
+                                                            ue 2
+   14 00000014 00000004 
+                       R       EQU              4           ;
+   15 00000014 00000005 
+                       S       EQU              5           ;
+   16 00000014                 END
+Command Line: --debug --xref --apcs=interwork --depend=.\second.d -o.\second.o 
+-I"D:\Program Files\Keil\ARM\RV31\INC" -I"D:\Program Files\Keil\ARM\CMSIS\Inclu
+de" -I"D:\Program Files\Keil\ARM\Inc\Philips" --predefine="__EVAL SETA 1" --lis
+t=.\second.lst second.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+Example2 00000000
+
+Symbol: Example2
+   Definitions
+      At line 1 in file second.asm
+   Uses
+      None
+Comment: Example2 unused
+Stop 00000014
+
+Symbol: Stop
+   Definitions
+      At line 11 in file second.asm
+   Uses
+      None
+Comment: Stop unused
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 4 in file second.asm
+   Uses
+      None
+Comment: start unused
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+Q 00000002
+
+Symbol: Q
+   Definitions
+      At line 13 in file second.asm
+   Uses
+      At line 5 in file second.asm
+Comment: Q used once
+R 00000004
+
+Symbol: R
+   Definitions
+      At line 14 in file second.asm
+   Uses
+      At line 6 in file second.asm
+Comment: R used once
+S 00000005
+
+Symbol: S
+   Definitions
+      At line 15 in file second.asm
+   Uses
+      At line 7 in file second.asm
+Comment: S used once
+3 symbols
+337 symbols in table

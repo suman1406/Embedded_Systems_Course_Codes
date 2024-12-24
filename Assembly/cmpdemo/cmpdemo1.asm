@@ -1,0 +1,5 @@
+		AREA     RESET, CODE, READONLY
+		ENTRY
+		MOV R0, #7
+		MOV R0,R0,LSL #7
+		end

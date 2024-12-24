@@ -1,0 +1,2 @@
+Dependencies for Project 'smallestelement', Target 'Target 1': (DO NOT MODIFY !)
+F (.\main.asm)(0x636B306C)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I "C:\Keil_v4\ARM\INC" -I "C:\Keil_v4\ARM\INC\Philips" --list "main.lst" --xref -o "main.o")

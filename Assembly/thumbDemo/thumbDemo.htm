@@ -1,0 +1,51 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [D:\19CSE303\19CSE303-ODDSem2022-23\Lab\rough\thumbDemo\thumbDemo.axf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image D:\19CSE303\19CSE303-ODDSem2022-23\Lab\rough\thumbDemo\thumbDemo.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, RVCT4.0 [Build 728]: Last Updated: Fri Nov 18 03:07:32 2022
+<BR><P>
+<H3>Maximum Stack Usage =          0 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+
+<P>
+<H3>
+Functions with no stack information
+</H3><UL>
+ <LI><a href="#[273e928]">thumbCode</a>
+ <LI><a href="#[273e8ec]">stop</a>
+</UL>
+</UL>
+<P>
+<H3>
+Mutually Recursive functions
+</H3> <LI><a href="#[273e8ec]">stop</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[273e8ec]">stop</a><BR>
+</UL>
+<P>
+<H3>
+Function Pointers
+</H3><UL>
+ <LI><a href="#[273e928]">thumbCode</a>
+</UL>
+<P>
+<H3>
+Global Symbols
+</H3><P>
+<H3>
+Local Symbols
+</H3>
+<P><STRONG><a name="[273e928]"></a>thumbCode</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, main1.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[273e8ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stop
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> main1.o(RESET)
+</UL>
+<P><STRONG><a name="[273e8ec]"></a>stop</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, main1.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[273e8ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stop
+</UL>
+<BR>[Called By]<UL><LI><a href="#[273e8ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stop
+<LI><a href="#[273e928]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;thumbCode
+</UL>
+<P>
+<H3>
+Undefined Global Symbols
+</H3><HR></body></html>

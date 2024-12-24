@@ -1,0 +1,51 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\19CSE303\19CSE303-ODDSem2022-23\Lab\assembly\multipleloadstore\mulitloadstore.uvproj
+Project File Date:  11/07/2022
+
+<h2>Output:</h2>
+Build target 'Target 1'
+Target has no object modules
+Target not created
+Build target 'Target 1'
+assembling main.asm...
+main.asm(8): warning: A1313W: Missing END directive at end of file
+linking...
+mulitloadstore.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=20 RO-data=0 RW-data=0 ZI-data=0  
+FromELF: creating hex file...
+"mulitloadstore.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling main.asm...
+main.asm(4): error: A1137E: Unexpected characters at end of line
+main.asm(5): error: A1137E: Unexpected characters at end of line
+main.asm(6): error: A1137E: Unexpected characters at end of line
+main.asm(8): warning: A1313W: Missing END directive at end of file
+Target not created
+Build target 'Target 1'
+assembling main.asm...
+main.asm(8): warning: A1313W: Missing END directive at end of file
+linking...
+mulitloadstore.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=8 RO-data=0 RW-data=0 ZI-data=0  
+FromELF: creating hex file...
+"mulitloadstore.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling main.asm...
+main.asm(8): warning: A1313W: Missing END directive at end of file
+linking...
+mulitloadstore.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=20 RO-data=0 RW-data=0 ZI-data=0  
+FromELF: creating hex file...
+"mulitloadstore.axf" - 0 Error(s), 2 Warning(s).
+Build target 'Target 1'
+assembling main.asm...
+main.asm(9): warning: A1313W: Missing END directive at end of file
+linking...
+mulitloadstore.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=24 RO-data=0 RW-data=0 ZI-data=0  
+FromELF: creating hex file...
+"mulitloadstore.axf" - 0 Error(s), 2 Warning(s).

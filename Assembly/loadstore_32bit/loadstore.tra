@@ -1,0 +1,19 @@
+*** Creating Trace Output File 'loadstore.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"main.o"'
+### ADS-LD Command completed:
+--cpu ARM7TDMI "main.o" --strict --scatter "loadstore.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\loadstore.map" -o "loadstore.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'loadstore.axf'
+### ADS-LD Command File: 'loadstore.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'loadstore.lnp', Handle=0x00000C68
+### Writing '.lnp' file
+### ADS-LD Command file 'loadstore.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

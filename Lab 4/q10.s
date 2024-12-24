@@ -1,0 +1,11 @@
+	AREA qn10, CODE, READONLY
+	ENTRY
+Main MOV R0, #0x10
+	 MOV R1, #0x01
+	 MOV R2, R0
+	 MOV R0, R1
+	 MOV R1, R2
+	 MOV R2, #0
+	 
+Stop B Stop
+	 END

@@ -1,0 +1,2 @@
+Dependencies for Project 'demo', Target 'Target 1': (DO NOT MODIFY !)
+F (.\main.s)(0x66A09A6A)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\KeilV4\Keil\ARM\RV31\INC-I C:\KeilV4\Keil\ARM\CMSIS\Include-I C:\KeilV4\Keil\ARM\Inc\Philips--list .\main.lst --xref -o .\main.o --depend .\main.d)

@@ -1,0 +1,2 @@
+Dependencies for Project '1', Target 'Target 1': (DO NOT MODIFY !)
+F (.\1.s)(0x637717FE)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I "C:\Keil_v4\ARM\INC" -I "C:\Keil_v4\ARM\INC\Philips" --list ".\Listings\1.lst" --xref -o ".\Objects\1.o")

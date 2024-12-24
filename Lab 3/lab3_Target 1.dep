@@ -1,0 +1,2 @@
+Dependencies for Project 'lab3', Target 'Target 1': (DO NOT MODIFY !)
+F (.\rev_array.s)(0x66A0DAB8)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Users\Public\Downloads\ARM\RV31\INC-I C:\Users\Public\Downloads\ARM\CMSIS\Include-I C:\Users\Public\Downloads\ARM\Inc\Philips--list .\rev_array.lst --xref -o .\rev_array.o --depend .\rev_array.d)

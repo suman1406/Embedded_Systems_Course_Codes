@@ -1,0 +1,112 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ; Example: Determine the sign of the difference between 
+                       two numbers
+    2 00000000         
+    3 00000000         ; Assume R0 contains first number, R1 contains second nu
+                       mber
+    4 00000000                 AREA             RESET, CODE, READONLY
+    5 00000000         
+    6 00000000                 ENTRY
+    7 00000000         
+    8 00000000 E3A00002        MOV              R0,#2
+    9 00000004 E3A01002        MOV              R1,#2
+   10 00000008         
+   11 00000008 E0402001        SUB              R2, R0, R1  ; R2 = R0 - R1
+   12 0000000C         
+   13 0000000C E3520000        CMP              R2, #0      ; Compare R2 with 0
+                                                            
+   14 00000010 CA000002        BGT              positive_diff ; Branch if great
+                                                            er than (R0 > R1)
+   15 00000014 BA000003        BLT              negative_diff ; Branch if less 
+                                                            than (R0 < R1)
+   16 00000018         
+   17 00000018         ; Equal case (R0 == R1)
+   18 00000018 E3A03000        MOV              R3, #0      ; R3 = 0 (indicatin
+                                                            g no difference)
+   19 0000001C EAFFFFFE 
+                       end     B                end         ; Branch to end
+   20 00000020         
+   21 00000020         positive_diff
+   22 00000020         ; R0 > R1 case
+   23 00000020 E3A03001        MOV              R3, #1      ; R3 = 1 (indicatin
+                                                            g positive differen
+                                                            ce)
+   24 00000024 EAFFFFFE 
+                       end1    B                end1        ; Branch to end
+   25 00000028         
+   26 00000028         negative_diff
+   27 00000028         ; R0 < R1 case
+   28 00000028 E3E03000        MOV              R3, #-1     ; R3 = -1 (indicati
+                                                            ng negative differe
+                                                            nce)
+   29 0000002C         
+   30 0000002C EAFFFFFE 
+                       end2    B                end2
+   31 00000030         ; Continue with common code here
+   32 00000030         ; R3 now contains -1 if R0 < R1, 0 if R0 == R1, or 1 if 
+                       R0 > R1
+   33 00000030                 END
+Command Line: --debug --xref --apcs=interwork --depend=.\main.d -o.\main.o -IC:
+\KeilV4\Keil\ARM\RV31\INC -IC:\KeilV4\Keil\ARM\CMSIS\Include -IC:\KeilV4\Keil\A
+RM\Inc\Philips --predefine="__EVAL SETA 1" --list=.\main.lst main.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 4 in file main.s
+   Uses
+      None
+Comment: RESET unused
+end 0000001C
+
+Symbol: end
+   Definitions
+      At line 19 in file main.s
+   Uses
+      At line 19 in file main.s
+Comment: end used once
+end1 00000024
+
+Symbol: end1
+   Definitions
+      At line 24 in file main.s
+   Uses
+      At line 24 in file main.s
+Comment: end1 used once
+end2 0000002C
+
+Symbol: end2
+   Definitions
+      At line 30 in file main.s
+   Uses
+      At line 30 in file main.s
+Comment: end2 used once
+negative_diff 00000028
+
+Symbol: negative_diff
+   Definitions
+      At line 26 in file main.s
+   Uses
+      At line 15 in file main.s
+Comment: negative_diff used once
+positive_diff 00000020
+
+Symbol: positive_diff
+   Definitions
+      At line 21 in file main.s
+   Uses
+      At line 14 in file main.s
+Comment: positive_diff used once
+6 symbols
+337 symbols in table

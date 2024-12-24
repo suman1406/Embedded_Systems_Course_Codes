@@ -1,0 +1,32 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         
+    2 00000000                 AREA             RESET, CODE, READONLY
+    3 00000000                 ENTRY
+    4 00000000 E3A00001        MOV              r0, #1
+    5 00000004 E3500000        CMP              r0,#0
+    6 00000008 02811001        ADDEQ            r1,r1,#1
+    7 0000000C 12822001        ADDNE            r2,r2,#1
+    8 00000010                 end
+Command Line: --debug --xref --apcs=interwork -omain.o -IC:\Keil_v4\ARM\INC -IC
+:\Keil_v4\ARM\INC\Philips --predefine="__EVAL SETA 1" --list=main.lst main.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 2 in file main.asm
+   Uses
+      None
+Comment: RESET unused
+1 symbol
+321 symbols in table

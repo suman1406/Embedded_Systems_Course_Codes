@@ -1,0 +1,111 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;/*Program to find smallest of N numbers*/ 
+    2 00000000         
+    3 00000000                 AREA             reset, code, readonly
+    4 00000000                 ENTRY
+    5 00000000         main
+    6 00000000 E59F0034        ldr              r0,=data1
+    7 00000004 E3A03101        ldr              r3,=0x40000000
+    8 00000008 E3A04005        ldr              r4,=0x05    ;//length of loop
+    9 0000000C E4901004        ldr              r1,[r0],#04
+   10 00000010 E2444001        sub              r4,r4,#01
+   11 00000014         back
+   12 00000014 E5902000        ldr              r2,[r0]
+   13 00000018 E1510002        cmp              r1,r2
+   14 0000001C 9A000000        bls              less        ;// branch on low
+   15 00000020 E1A01002        mov              r1,r2
+   16 00000024         less
+   17 00000024 E2800004        add              r0,r0,#04
+   18 00000028 E2444001        sub              r4,r4,#01
+   19 0000002C E3540000        cmp              r4,#00
+   20 00000030 1AFFFFF7        bne              back
+   21 00000034 E5831000        str              r1,[r3]     ;// smallest value 
+                                                            stored in memory lo
+                                                            cation
+   22 00000038 EAFFFFFE 
+                       stop    b                stop
+   23 0000003C 00000000        AREA             data,code
+   24 00000000 00000064 
+              00000005 
+              00000096 
+              00000010 
+              00000065 data1   dcd              &64,&05,&96,&10,&65
+   25 00000014                 END
+Command Line: --debug --xref --apcs=interwork -omain.o -IC:\Keil_v4\ARM\INC -IC
+:\Keil_v4\ARM\INC\Philips --predefine="__EVAL SETA 1" --list=main.lst main.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+back 00000014
+
+Symbol: back
+   Definitions
+      At line 11 in file main.asm
+   Uses
+      At line 20 in file main.asm
+Comment: back used once
+less 00000024
+
+Symbol: less
+   Definitions
+      At line 16 in file main.asm
+   Uses
+      At line 14 in file main.asm
+Comment: less used once
+main 00000000
+
+Symbol: main
+   Definitions
+      At line 5 in file main.asm
+   Uses
+      None
+Comment: main unused
+reset 00000000
+
+Symbol: reset
+   Definitions
+      At line 3 in file main.asm
+   Uses
+      None
+Comment: reset unused
+stop 00000038
+
+Symbol: stop
+   Definitions
+      At line 22 in file main.asm
+   Uses
+      At line 22 in file main.asm
+Comment: stop used once
+5 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+data 00000000
+
+Symbol: data
+   Definitions
+      At line 23 in file main.asm
+   Uses
+      None
+Comment: data unused
+data1 00000000
+
+Symbol: data1
+   Definitions
+      At line 24 in file main.asm
+   Uses
+      At line 6 in file main.asm
+Comment: data1 used once
+2 symbols
+329 symbols in table

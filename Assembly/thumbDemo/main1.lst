@@ -1,0 +1,81 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ;ARM_MODE_TO_THUMB_AND_THUMB_MODE_TO_ARM
+    2 00000000         ;This example shows a small code fragment that uses both
+                        ARM and Thumb versions of the BX instruction.
+    3 00000000         ;You can see that the branch address Thumb has the lowes
+                       t bit set
+    4 00000000         ;This sets the T bit in the cpsr to Thumb state
+    5 00000000         ; Courtesy : ARM System Developer's guide : Andrew N Slo
+                       ss
+    6 00000000         ; Page No 91 and example 4.1
+    7 00000000                 AREA             RESET, CODE, READONLY
+    8 00000000                 ENTRY
+    9 00000000         
+   10 00000000         ;ARM CODE
+   11 00000000         
+   12 00000000                 CODE32                       ; word aligned
+   13 00000000 E59F0014        LDR              R0, =thumbCode+1 ; +1 to enter 
+                                                            Thumb state
+   14 00000004 E1A0E00F        MOV              lr, pc      ; set the return ad
+                                                            dress
+   15 00000008 E12FFF10        BX               R0
+   16 0000000C E2833005        ADD              R3,R3,#5    ; branch to Thumb c
+                                                            ode and mode
+   17 00000010         
+   18 00000010         ;continue here
+   19 00000010         
+   20 00000010         ;Thumb code
+   21 00000010                 CODE16                       ; halfword aligned
+   22 00000010         
+   23 00000010         thumbCode
+   24 00000010         
+   25 00000010 3101            ADD              R1, #1
+   26 00000012 2905            CMP              R1,#5
+   27 00000014 D0FE            BEQ              stop
+   28 00000016 4770            BX               lr          ; return to ARM cod
+                                                            e and state
+   29 00000018 E7FE    stop    b                stop
+   30 0000001A DF11            SWI              0x11
+   31 0000001C                 END
+              00000001 
+Command Line: --debug --xref --apcs=interwork -omain1.o -IC:\Keil_v4\ARM\INC -I
+C:\Keil_v4\ARM\INC\Philips --predefine="__EVAL SETA 1" --list=main1.lst main1.a
+sm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 7 in file main1.asm
+   Uses
+      None
+Comment: RESET unused
+stop 00000018
+
+Symbol: stop
+   Definitions
+      At line 29 in file main1.asm
+   Uses
+      At line 27 in file main1.asm
+      At line 29 in file main1.asm
+
+thumbCode 00000010
+
+Symbol: thumbCode
+   Definitions
+      At line 23 in file main1.asm
+   Uses
+      At line 13 in file main1.asm
+Comment: thumbCode used once
+3 symbols
+325 symbols in table

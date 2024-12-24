@@ -1,0 +1,3 @@
+Dependencies for Project 'ADD', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Startup.s)(0x4A02A570)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I "C:\Keil_v4\ARM\INC" -I "C:\Keil_v4\ARM\INC\Philips" --list "Startup.lst" --xref -o "Startup.o")
+F (.\add.c)(0x58BE774E)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I "C:\Keil_v4\ARM\INC" -I "C:\Keil_v4\ARM\INC\Philips" -o "add.o" --omf_browse "add.crf" --depend "add.d")

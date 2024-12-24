@@ -1,0 +1,54 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         ; Example: Execute if R0 equals R1
+    4 00000000 E3A00001        MOV              R0,#1
+    5 00000004 E3A01001        MOV              R1,#1
+    6 00000008 E1500001        CMP              R0, R1
+    7 0000000C 00813000        ADDEQ            R3, R1, R0  ; Add R3 and R4 and
+                                                             store in R2 if R0 
+                                                            == R1
+    8 00000010         
+    9 00000010         ; Example: Execute if R0 does not equal R1
+   10 00000010 E3A00001        MOV              R0,#1
+   11 00000014 E3A01002        MOV              R1,#2
+   12 00000018 E1500001        CMP              R0, R1
+   13 0000001C 10412000        SUBNE            R2, R1, R0  ; Subtract R4 from 
+                                                            R3 and store in R2 
+                                                            if R0 != R1
+   14 00000020         
+   15 00000020 EAFFFFFE 
+                       stop    B                stop
+                       
+Command Line: --debug --xref --apcs=interwork --depend=.\main.d -o.\main.o -IC:
+\KeilV4\Keil\ARM\RV31\INC -IC:\KeilV4\Keil\ARM\CMSIS\Include -IC:\KeilV4\Keil\A
+RM\Inc\Philips --predefine="__EVAL SETA 1" --list=.\main.lst main.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file main.s
+   Uses
+      None
+Comment: RESET unused
+stop 00000020
+
+Symbol: stop
+   Definitions
+      At line 15 in file main.s
+   Uses
+      At line 15 in file main.s
+Comment: stop used once
+2 symbols
+333 symbols in table

@@ -1,0 +1,19 @@
+*** Creating Trace Output File 'storeDemo.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"main.o"'
+### ADS-LD Command completed:
+--cpu ARM7TDMI "main.o" --strict --scatter "storeDemo.sct" 
+--autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\storeDemo.map" -o "storeDemo.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'storeDemo.axf'
+### ADS-LD Command File: 'storeDemo.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'storeDemo.lnp', Handle=0x0000055C
+### Writing '.lnp' file
+### ADS-LD Command file 'storeDemo.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

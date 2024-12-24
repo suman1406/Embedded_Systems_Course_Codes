@@ -1,0 +1,49 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000 E3A01007        MOV              R1, #7
+    4 00000004 E1A00001        MOV              R0,R1
+    5 00000008 E1A01180        MOV              R1,R0,LSL #3
+    6 0000000C E1A011A1        MOV              R1,R1,LSR #3
+    7 00000010 E3A0200A        MOV              R2, #10
+    8 00000014 E1A00002        MOV              R0,R2
+    9 00000018 E1A00C00        MOV              R0,R0,LSL #24
+   10 0000001C E1A00C20        MOV              R0,R0,LSR #24
+   11 00000020 E0211000        EOR              R1,R1,R0
+   12 00000024 E1A01401        MOV              R1,R1,LSL #8
+   13 00000028 E1A01801        MOV              R1,R1,LSL #16
+   14 0000002C E1A01821        MOV              R1,R1,LSR #16
+   15 00000030 EAFFFFFE 
+                       stop    B                stop
+   16 00000034                 end
+Command Line: --debug --xref --apcs=interwork -omain.o -IC:\Keil_v4\ARM\INC -IC
+:\Keil_v4\ARM\INC\Philips --predefine="__EVAL SETA 1" --list=main.lst main.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file main.asm
+   Uses
+      None
+Comment: RESET unused
+stop 00000030
+
+Symbol: stop
+   Definitions
+      At line 15 in file main.asm
+   Uses
+      At line 15 in file main.asm
+Comment: stop used once
+2 symbols
+322 symbols in table

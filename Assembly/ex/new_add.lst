@@ -1,0 +1,33 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET, CODE, READONLY
+    2 00000000         ; Name this block of code ARMex
+    3 00000000                 ENTRY                        ; Mark first instru
+                                                            ction to execute
+    4 00000000 E3A00001        MOV              r0, #1      ; Set up parameters
+                                                            
+    5 00000004 E3A01001        MOV              r1, #1
+    6 00000008 E0800001        ADD              r0, r0, r1  ; r0 = r0 + r1
+    7 0000000C                 END
+Command Line: --debug --xref --device=DARMP --apcs=interwork -onew_add.o -IC:\K
+eil\ARM\INC\Philips --predefine="__EVAL SETA 1" --list=new_add.lst new_add.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file new_add.s
+   Uses
+      None
+Comment: RESET unused
+1 symbol
+321 symbols in table

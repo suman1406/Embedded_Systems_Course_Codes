@@ -1,0 +1,58 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET, CODE, READONLY
+    2 00000000         ; Name this block of code ARMex
+    3 00000000                 ENTRY                        ; Mark first instru
+                                                            ction to execute
+    4 00000000         start
+    5 00000000 E3A0000A        MOV              r0, #10     ; Set up parameters
+                                                            
+    6 00000004 E3A01003        MOV              r1, #3
+    7 00000008 E0800001        ADD              r0, r0, r1  ; r0 = r0 + r1
+    8 0000000C         stop
+    9 0000000C E3A00018        MOV              r0, #0x18   ; angel_SWIreason_R
+                                                            eportException
+   10 00000010 E59F1000        LDR              r1, =0x20026 ; ADP_Stopped_Appl
+                                                            icationExit
+   11 00000014 EF123456        SVC              #0x123456   ; ARM semihosting (
+                                                            formerly SWI)
+   12 00000018                 END                          ; Mark end of file
+              00020026 
+Command Line: --debug --xref --device=DARMP --apcs=interwork -oadd.o -IC:\Keil\
+ARM\INC\Philips --predefine="__EVAL SETA 1" --list=add.lst add.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file add.s
+   Uses
+      None
+Comment: RESET unused
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 4 in file add.s
+   Uses
+      None
+Comment: start unused
+stop 0000000C
+
+Symbol: stop
+   Definitions
+      At line 8 in file add.s
+   Uses
+      None
+Comment: stop unused
+3 symbols
+325 symbols in table

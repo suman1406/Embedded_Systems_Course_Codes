@@ -1,0 +1,59 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             reset, CODE, READONLY ; Name th
+                                                            is block of code
+    2 00000000                 ENTRY                        ; Mark first instru
+                                                            ction to execute
+    3 00000000 E3A0000A        MOV              r0, #10     ; Set up parameters
+                                                            
+    4 00000004 E3A01003        MOV              r1, #3
+    5 00000008 EB000002        BL               doadd       ; Call subroutine
+    6 0000000C E3A03002        MOV              r3, #2      ; angel_SWIreason_R
+                                                            eportException
+    7 00000010 E0434000        SUB              r4,r3,r0
+    8 00000014 EAFFFFFE 
+                       stop    B                stop
+    9 00000018         
+   10 00000018 E0800001 
+                       doadd   ADD              r0, r0, r1  ; Subroutine code
+   11 0000001C E12FFF1E        BX               lr          ; Return from subro
+                                                            utine
+   12 00000020                 END
+Command Line: --debug --xref --apcs=interwork -omain.o -IC:\Keil_v4\ARM\INC -IC
+:\Keil_v4\ARM\INC\Philips --predefine="__EVAL SETA 1" --list=main.lst main.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+doadd 00000018
+
+Symbol: doadd
+   Definitions
+      At line 10 in file main.asm
+   Uses
+      At line 5 in file main.asm
+Comment: doadd used once
+reset 00000000
+
+Symbol: reset
+   Definitions
+      At line 1 in file main.asm
+   Uses
+      None
+Comment: reset unused
+stop 00000014
+
+Symbol: stop
+   Definitions
+      At line 8 in file main.asm
+   Uses
+      At line 8 in file main.asm
+Comment: stop used once
+3 symbols
+323 symbols in table

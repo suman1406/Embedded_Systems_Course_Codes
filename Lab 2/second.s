@@ -1,0 +1,15 @@
+	AREA qn2,CODE,READONLY
+	ENTRY
+Main MOV R0,#1
+	 MOV R1,#2
+	 MOV R2,#3
+	 MOV R3,#4
+	 MOV R4,#5
+	 
+	 SUB R6,R3,R4
+	 ADD R7,R0,R1
+	 ADD R7,R7,R2
+	 ADD R7,R7,R6
+Stop B Stop;
+	END
+		

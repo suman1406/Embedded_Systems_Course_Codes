@@ -1,0 +1,15 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\19CSE303\19CSE303-ODDSem2022-23\Lab\assembly\smallestofn_number\smallestelement.uvproj
+Project File Date:  11/08/2022
+
+<h2>Output:</h2>
+Build target 'Target 1'
+linking...
+smallestelement.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=84 RO-data=0 RW-data=0 ZI-data=0  
+FromELF: creating hex file...
+"smallestelement.axf" - 0 Error(s), 1 Warning(s).

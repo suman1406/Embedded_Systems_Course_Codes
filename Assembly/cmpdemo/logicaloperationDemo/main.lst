@@ -1,0 +1,66 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             ConditionalBranch, CODE, READON
+LY
+    2 00000000         
+    3 00000000                 ENTRY
+    4 00000000 E3A0000A        MOV              R0, #10     ; Move immediate va
+                                                            lue 10 into R0
+    5 00000004 E3A0100F        MOV              R1, #15     ; Move immediate va
+                                                            lue 15 into R1
+    6 00000008 E1500001        CMP              R0, R1      ; Compare R0 and R1
+                                                            
+    7 0000000C CA000001        BGT              larger      ; Branch if R0 > R1
+                                                            
+    8 00000010         
+    9 00000010         ; R0 is not greater than R1
+   10 00000010 E3A02000        MOV              R2, #0      ; Move 0 into R2
+   11 00000014 EA000000        B                end         ; Branch to end
+   12 00000018         
+   13 00000018 E3A02001 
+                       larger  MOV              R2, #1      ; Move 1 into R2 (R
+                                                            0 is greater than R
+                                                            1)
+   14 0000001C         
+   15 0000001C         end                                  ; End of program
+   16 0000001C         
+   17 0000001C                 END
+Command Line: --debug --xref --apcs=interwork --depend=.\main.d -o.\main.o -IC:
+\KeilV4\Keil\ARM\RV31\INC -IC:\KeilV4\Keil\ARM\CMSIS\Include -IC:\KeilV4\Keil\A
+RM\Inc\Philips --predefine="__EVAL SETA 1" --list=.\main.lst main.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+ConditionalBranch 00000000
+
+Symbol: ConditionalBranch
+   Definitions
+      At line 1 in file main.s
+   Uses
+      None
+Comment: ConditionalBranch unused
+end 0000001C
+
+Symbol: end
+   Definitions
+      At line 15 in file main.s
+   Uses
+      At line 11 in file main.s
+Comment: end used once
+larger 00000018
+
+Symbol: larger
+   Definitions
+      At line 13 in file main.s
+   Uses
+      At line 7 in file main.s
+Comment: larger used once
+3 symbols
+334 symbols in table

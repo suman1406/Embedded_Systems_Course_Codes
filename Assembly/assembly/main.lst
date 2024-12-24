@@ -1,0 +1,101 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             RESET, CODE, READONLY
+    2 00000000         ; Name this block of code ARMex
+    3 00000000                 ENTRY                        ; Mark first instru
+                                                            ction to execute
+    4 00000000         start
+    5 00000000 E3A0000A        MOV              r0, #10     ; Set up parameters
+                                                            
+    6 00000004 E3A01003        MOV              r1, #3
+    7 00000008 E0800001        ADD              r0, r0, r1  ; r0 = r0 + r1
+    8 0000000C         
+    9 0000000C E3A01002        MOV              r1,#Q       ;load r1 with the c
+                                                            onstant Q
+   10 00000010 E3A02004        MOV              r2,#R
+   11 00000014 E3A03005        MOV              r3,#S
+   12 00000018 E0810002        ADD              r0,r1,r2
+   13 0000001C E0800003        ADD              r0,r0,r3
+   14 00000020 EAFFFFFE 
+                       stop    B                stop
+   15 00000024         
+   16 00000024 00000002 
+                       Q       EQU              2           ;Equate the symboli
+                                                            c name Q to the val
+                                                            ue 2
+   17 00000024 00000004 
+                       R       EQU              4           ;
+   18 00000024 00000005 
+                       S       EQU              5           ;
+   19 00000024                 END
+Command Line: --debug --xref --apcs=interwork --depend=.\main.d -o.\main.o -I"D
+:\Program Files\Keil\ARM\RV31\INC" -I"D:\Program Files\Keil\ARM\CMSIS\Include" 
+-I"D:\Program Files\Keil\ARM\Inc\Philips" --predefine="__EVAL SETA 1" --list=.\
+main.lst main.asm
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+RESET 00000000
+
+Symbol: RESET
+   Definitions
+      At line 1 in file main.asm
+   Uses
+      None
+Comment: RESET unused
+start 00000000
+
+Symbol: start
+   Definitions
+      At line 4 in file main.asm
+   Uses
+      None
+Comment: start unused
+stop 00000020
+
+Symbol: stop
+   Definitions
+      At line 14 in file main.asm
+   Uses
+      At line 14 in file main.asm
+Comment: stop used once
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Absolute symbols
+
+Q 00000002
+
+Symbol: Q
+   Definitions
+      At line 16 in file main.asm
+   Uses
+      At line 9 in file main.asm
+Comment: Q used once
+R 00000004
+
+Symbol: R
+   Definitions
+      At line 17 in file main.asm
+   Uses
+      At line 10 in file main.asm
+Comment: R used once
+S 00000005
+
+Symbol: S
+   Definitions
+      At line 18 in file main.asm
+   Uses
+      At line 11 in file main.asm
+Comment: S used once
+3 symbols
+337 symbols in table

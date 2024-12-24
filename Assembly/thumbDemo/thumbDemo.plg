@@ -1,0 +1,16 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\19CSE303\19CSE303-ODDSem2022-23\Lab\rough\thumbDemo\thumbDemo.uvproj
+Project File Date:  11/15/2022
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling main1.asm...
+linking...
+thumbDemo.sct(8): warning: L6314W: No section matches pattern *(InRoot$$Sections).
+Program Size: Code=32 RO-data=0 RW-data=0 ZI-data=0  
+FromELF: creating hex file...
+"thumbDemo.axf" - 0 Error(s), 1 Warning(s).

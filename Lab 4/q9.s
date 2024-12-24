@@ -1,0 +1,7 @@
+	AREA qn9, CODE, READONLY
+	ENTRY
+Main MOV R0, #0x10
+	 MOV R1, R0, LSR #4
+	 
+Stop B Stop
+	 END

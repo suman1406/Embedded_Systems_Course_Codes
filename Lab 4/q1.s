@@ -1,0 +1,8 @@
+	AREA qn1, CODE, READONLY
+	ENTRY
+Main MOV R0, #7
+	 MOV R1, #3
+	 ADD R2,R0,R1
+
+Stop B Stop
+	END
